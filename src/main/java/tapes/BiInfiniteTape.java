@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class BiInfiniteTape extends AbstractBiInfiniteTape {
 
     public BiInfiniteTape() {
-        tapeForward = new ArrayList<Character>();
-        tapeBackward = new ArrayList<Character>();
+        tapeForward = new ArrayList<>();
+        tapeBackward = new ArrayList<>();
         pointer = 0;
     }
 }
