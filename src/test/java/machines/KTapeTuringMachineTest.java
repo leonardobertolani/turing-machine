@@ -9,26 +9,26 @@ class KTapeTuringMachineTest {
     @Test
     void compute() {
         TuringMachine kTape = new KTapeTuringMachine();
-        kTape.loadConfiguration("D:\\Progetti\\Scienza\\automaton\\src\\main\\java\\configurations\\conf1.json");
-        kTape.loadInputString("aab");
+        kTape.loadConfiguration("D:\\Progetti\\Scienza\\turing-machine\\src\\test\\java\\configurations\\conf1.json");
+        kTape.loadInputString("abb");
 
         kTape.compute();
 
         assertTrue(kTape.isBlocked());
-        assertFalse(kTape.isAccepting());
+        assertTrue(kTape.isAccepting());
     }
 
     @Test
     void oneStep() {
         TuringMachine kTape = new KTapeTuringMachine();
-        kTape.loadConfiguration("D:\\Progetti\\Scienza\\turing-machine\\src\\main\\java\\configurations\\conf1.json");
+        kTape.loadConfiguration("D:\\Progetti\\Scienza\\turing-machine\\src\\test\\java\\configurations\\conf1.json");
         kTape.loadInputString("aab");
 
         kTape.oneStep();
         assertFalse(kTape.isBlocked());
         kTape.oneStep();
         assertTrue(kTape.isBlocked());
-        assertFalse(kTape.isAccepting());
+        assertTrue(kTape.isAccepting());
 
     }
 }
