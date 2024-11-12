@@ -1,0 +1,80 @@
+{
+  "k": 1,
+  "configuration" : [
+    {
+      "inputState": "q0",
+      "isFinal": false,
+      "isInitial": true,
+      "transitions": [
+        {
+          "outputState": "q1",
+          "inputChar_inputTape": "a",
+          "outputChar_inputTape": "a",
+          "inputMemory": ["$"],
+          "outputMemory": ["$"],
+          "outputChar_outputTape": "_",
+          "move": ["S", "S","R"]
+        }
+      ]
+    },
+
+    {
+      "inputState": "q1",
+      "isFinal": false,
+      "isInitial": false,
+      "transitions": [
+        {
+          "outputState": "q1",
+          "inputChar_inputTape": "a",
+          "outputChar_inputTape": "a",
+          "inputMemory": ["_"],
+          "outputMemory": ["A"],
+          "outputChar_outputTape": "_",
+          "move": ["R", "S","R"]
+        },
+        {
+          "outputState": "q2",
+          "inputChar_inputTape": "b",
+          "outputChar_inputTape": "b",
+          "inputMemory": ["_"],
+          "outputMemory": ["_"],
+          "outputChar_outputTape": "_",
+          "move": ["S", "S","L"]
+        }
+      ]
+    },
+
+    {
+      "inputState": "q2",
+      "isFinal": false,
+      "isInitial": false,
+      "transitions": [
+        {
+          "outputState": "q2",
+          "inputChar_inputTape": "b",
+          "outputChar_inputTape": "b",
+          "inputMemory": ["A"],
+          "outputMemory": ["B"],
+          "outputChar_outputTape": "_",
+          "move": ["R", "S","L"]
+        },
+        {
+          "outputState": "q3",
+          "inputChar_inputTape": "_",
+          "outputChar_inputTape": "_",
+          "inputMemory": ["$"],
+          "outputMemory": ["$"],
+          "outputChar_outputTape": "_",
+          "move": ["S", "S","S"]
+        }
+      ]
+    },
+
+    {
+      "inputState": "q3",
+      "isFinal": true,
+      "isInitial": false,
+      "transitions": [ ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "k": 2,
+  "configuration": [
+    {
+      "inputState": "q0",
+      "isFinal": false,
+      "isInitial": true,
+      "transitions": [
+        {
+          "outputState": "q1",
+          "inputString": "a",
+          "inputMemory": ["$", "$"],
+          "outputString": "a",
+          "outputMemory": ["$", "$"],
+          "move": ["R", "S", "S"]
+        },
+
+        {
+          "outputState": "q2",
+          "inputString": "b",
+          "inputMemory": ["$", "$"],
+          "outputString": "b",
+          "outputMemory": ["$"],
+          "move": ["R", "S", "S"]
+        }
+      ]
+    },
+
+    {
+      "inputState": "q1",
+      "isFinal": true,
+      "isInitial": false,
+      "transitions": [
+        {
+          "outputState": "q0",
+          "inputString": "b",
+          "inputMemory": ["$", "$"],
+          "outputString": "b",
+          "outputMemory": ["$", "$"],
+          "move": ["R", "S", "S"]
+        }
+      ]
+    },
+
+    {
+      "inputState": "q2",
+      "isFinal": true,
+      "isInitial": false,
+      "transitions": [ ]
+    }
+  ]
+}
